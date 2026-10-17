@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" href="assets/img/logo-256.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"COCO SEA","legalName":"CÔNG TY TNHH COCO SEA","taxID":"0319570124","url":"https://cocoseavn.com/","logo":"https://cocoseavn.com/assets/img/logo.png","email":"Info@cocoseavn.com","telephone":"+84909641011","slogan":"Keep Going, Keep Growing","address":{"@type":"PostalAddress","streetAddress":"182/71 Đường số 6","addressLocality":"Phường Bình Tân","addressRegion":"Thành phố Hồ Chí Minh","addressCountry":"VN"}}
+{"@context":"https://schema.org","@type":"Organization","name":"COCO SEA","legalName":"CÔNG TY TNHH COCO SEA","taxID":"0319570124","url":"https://cocoseavn.com/","logo":"https://cocoseavn.com/assets/img/logo.png","email":"info@cocoseavn.com","telephone":"+84909641011","slogan":"Keep Going, Keep Growing","address":{"@type":"PostalAddress","streetAddress":"182/71 Đường số 6","addressLocality":"Phường Bình Tân","addressRegion":"Thành phố Hồ Chí Minh","addressCountry":"VN"}}
 </script>
 <style>
 @font-face{font-family:'Be Vietnam Pro';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/be-vietnam-pro-vietnamese-400-normal.woff2) format('woff2');unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}
@@ -372,6 +372,51 @@ h1{margin:16px 0 14px;font-weight:700;font-size:clamp(32px,min(3.7vw,6.8vh),62px
   .r-b,.r-c{stroke-dashoffset:0!important}
   .tr,.pr{display:none}
 }
+.top .brand,.top .rt,.info{position:relative;isolation:isolate;padding:10px 30px 30px}
+.top .brand::after,.top .rt::after,.info::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:54px;z-index:-1;pointer-events:none;
+  transform:perspective(330px) rotateX(66deg);transform-origin:50% 100%;border-radius:22px;
+  background:radial-gradient(circle,#D2FBFF 0 1.5px,rgba(61,230,245,.8) 2.5px,transparent 6px) 20px 50%/14px 14px no-repeat,
+    radial-gradient(circle,#D2FBFF 0 1.5px,rgba(61,230,245,.8) 2.5px,transparent 6px) calc(100% - 20px) 50%/14px 14px no-repeat,
+    linear-gradient(90deg,transparent,rgba(150,245,255,.95),transparent) 50% 7px/52% 1.5px no-repeat,
+    linear-gradient(rgba(150,240,255,.85),rgba(150,240,255,.85)) left 9px top 9px/16px 1.5px no-repeat,linear-gradient(rgba(150,240,255,.85),rgba(150,240,255,.85)) left 9px top 9px/1.5px 16px no-repeat,linear-gradient(rgba(150,240,255,.85),rgba(150,240,255,.85)) right 9px top 9px/16px 1.5px no-repeat,linear-gradient(rgba(150,240,255,.85),rgba(150,240,255,.85)) right 9px top 9px/1.5px 16px no-repeat,linear-gradient(rgba(150,240,255,.85),rgba(150,240,255,.85)) left 9px bottom 9px/16px 1.5px no-repeat,linear-gradient(rgba(150,240,255,.85),rgba(150,240,255,.85)) left 9px bottom 9px/1.5px 16px no-repeat,linear-gradient(rgba(150,240,255,.85),rgba(150,240,255,.85)) right 9px bottom 9px/16px 1.5px no-repeat,linear-gradient(rgba(150,240,255,.85),rgba(150,240,255,.85)) right 9px bottom 9px/1.5px 16px no-repeat,
+    repeating-linear-gradient(90deg,rgba(150,230,255,.13) 0 1px,transparent 1px 18px),
+    repeating-linear-gradient(0deg,rgba(150,230,255,.10) 0 1px,transparent 1px 13px),
+    linear-gradient(180deg,rgba(215,245,255,.36),rgba(90,170,245,.11) 55%,rgba(40,130,230,.22));
+  border:1.5px solid rgba(195,244,255,.72);
+  box-shadow:0 7px 0 -1px rgba(61,230,245,.8),0 12px 0 -2px rgba(70,150,230,.55),0 17px 0 -3px rgba(28,78,160,.62),0 0 40px rgba(61,230,245,.44),0 36px 42px rgba(0,8,34,.62),inset 0 0 30px rgba(150,235,255,.4),inset 0 2px 0 rgba(255,255,255,.6)}
+.top .brand::before,.top .rt::before,.info::before{content:"";position:absolute;left:4%;right:4%;bottom:14px;height:84px;z-index:-1;pointer-events:none;
+  background:linear-gradient(0deg,rgba(61,230,245,.24),transparent);-webkit-mask-image:radial-gradient(ellipse 62% 100% at 50% 100%,#000,transparent 78%);mask-image:radial-gradient(ellipse 62% 100% at 50% 100%,#000,transparent 78%)}
+
+/* ===== v13: bỏ thanh ngang — chữ & biểu tượng đứng trên đế kính (không trôi nổi) ===== */
+.top,.info{background:none;border:0;box-shadow:none;border-radius:0;backdrop-filter:none;-webkit-backdrop-filter:none;pointer-events:none}
+.top>*,.info>*{pointer-events:auto}
+.top{top:6px;height:auto;padding:0;align-items:flex-start}
+.top .rt{gap:8px}
+.top .brand b{text-shadow:0 1px 0 #9fe3ff,0 2px 0 #4f9fe8,0 3px 0 #1f5fb5,0 12px 14px rgba(0,8,30,.65),0 0 24px rgba(61,230,245,.45)}
+.top .brand img{filter:drop-shadow(0 8px 8px rgba(0,8,30,.55)) drop-shadow(0 0 10px rgba(61,230,245,.45))}
+.nav button,.nav a.app{text-shadow:0 1px 0 rgba(31,95,181,.9),0 8px 10px rgba(0,8,30,.55)}
+.nav a.app{text-shadow:none}
+.info{position:fixed;left:50%;right:auto;bottom:6px;width:max-content;max-width:calc(100% - 2*var(--pad));translate:-50% 0;min-height:0;padding:10px 38px 32px;justify-content:center;gap:8px 30px;text-shadow:0 1px 0 #3d85d4,0 9px 10px rgba(0,8,30,.65),0 0 12px rgba(61,230,245,.3)}
+.info .rg{color:#B7D3EE}
+@media (max-width:820px){
+  .top .brand::before,.top .brand::after,.top .rt::before,.top .rt::after{display:none}
+  .top .brand,.top .rt{padding:0}
+  .top{left:12px;right:12px;padding:6px 16px 22px;align-items:center}
+  .top::after,.top::before{content:"";position:absolute;left:0;right:0;z-index:-1;pointer-events:none}
+  .top::after{bottom:4px;height:46px;transform:perspective(330px) rotateX(66deg);transform-origin:50% 100%;border-radius:20px;
+    background:linear-gradient(90deg,transparent,rgba(150,245,255,.95),transparent) 50% 6px/52% 1.5px no-repeat,repeating-linear-gradient(90deg,rgba(150,230,255,.13) 0 1px,transparent 1px 18px),repeating-linear-gradient(0deg,rgba(150,230,255,.10) 0 1px,transparent 1px 13px),linear-gradient(180deg,rgba(215,245,255,.36),rgba(90,170,245,.11) 55%,rgba(40,130,230,.22));
+    border:1.5px solid rgba(195,244,255,.72);box-shadow:0 7px 0 -1px rgba(61,230,245,.8),0 12px 0 -2px rgba(70,150,230,.55),0 0 36px rgba(61,230,245,.42),0 30px 36px rgba(0,8,34,.6),inset 0 0 26px rgba(150,235,255,.4),inset 0 2px 0 rgba(255,255,255,.6)}
+  .top::before{bottom:12px;height:60px;background:linear-gradient(0deg,rgba(61,230,245,.22),transparent);-webkit-mask-image:radial-gradient(ellipse 60% 100% at 50% 100%,#000,transparent 78%);mask-image:radial-gradient(ellipse 60% 100% at 50% 100%,#000,transparent 78%)}
+  .info{left:var(--pad);right:var(--pad);translate:none;width:auto;max-width:none;padding:8px 14px 28px}
+}
+/* ===== v13: biểu tượng trôi nổi nhẹ (đế/halo đứng yên) ===== */
+@keyframes icoFloat{from{translate:0 calc(var(--B)*.004)}to{translate:0 calc(var(--B)*-.010)}}
+.nd .ob,.hub .ob{will-change:transform;animation:icoFloat 6s ease-in-out calc(var(--i,0)*-1.3s) infinite alternate}
+.hub .ob{animation-duration:7.5s;animation-delay:-2.4s}
+.nd:nth-child(2n) .ob{animation-duration:7s}
+.nd:nth-child(3n) .ob{animation-duration:5.4s}
+.net.paused .ob{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.nd .ob,.hub .ob{animation:none}}
 </style>
 </head>
 <body>
@@ -424,7 +469,7 @@ h1{margin:16px 0 14px;font-weight:700;font-size:clamp(32px,min(3.7vw,6.8vh),62px
 
 <footer class="info" id="info">
   <span class="ad"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span data-i="addr">182/71 Đường số 6, Phường Bình Tân, Tp. Hồ Chí Minh</span></span>
-  <a class="ml" href="mailto:Info@cocoseavn.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Info@cocoseavn.com</a>
+  <a class="ml" href="mailto:info@cocoseavn.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>info@cocoseavn.com</a>
   <span class="rg" data-i="copy">© 2026 COCO SEA Co., LTD. All rights reserved.</span>
 </footer>
 
@@ -441,7 +486,7 @@ h1{margin:16px 0 14px;font-weight:700;font-size:clamp(32px,min(3.7vw,6.8vh),62px
   </div>
 </div>
 
-<noscript><p style="position:fixed;bottom:80px;left:20px;right:20px;text-align:center;font-size:13px">COCO SEA — Coconut Products &amp; Logistics Solutions · Info@cocoseavn.com</p></noscript>
+<noscript><p style="position:fixed;bottom:80px;left:20px;right:20px;text-align:center;font-size:13px">COCO SEA — Coconut Products &amp; Logistics Solutions · info@cocoseavn.com</p></noscript>
 
 <script>
 (function(){
@@ -529,8 +574,8 @@ var D={
    peat:{t:'Coco Peat',s:'Growing medium',d:'Coco peat is the fine, spongy material left after the fiber is removed from the husk. It holds water well and stays airy.',p:['A familiar growing medium for nurseries, cultivation and soil improvement.','Suited to greenhouses and potted plants.','Product form and packing discussed to fit your needs.']},
    mat:{t:'Coconut Product',h:'Other Coconut Products',s:'Netting, mats, rope',d:'Netting, mats, rope and other products made from the coconut palm, supplied to manufacturers and importers across agriculture, industry and consumer goods.',p:['Sourcing and supply according to each market’s requirements.','Advice on specifications that suit the intended use.','Directly linked with COCO SEA’s international shipping services.']},
    ocean:{t:'Ocean Freight',s:'Sea container shipping',d:'Container shipments by sea to ports around the world.',p:['Booking with shipping lines and suitable vessel scheduling.','Voyage tracking and shipment status updates.','Prompt customer notices whenever the sailing schedule changes.']},
-   road:{t:'Road Transportation',s:'Warehouse–port link',d:'Inland haulage linking factories, warehouses and seaports, keeping the whole transport chain running smoothly.',p:['Container pick-up and delivery timed to stuffing and vessel schedules.','Closely coordinated with ocean freight through one point of contact.']},
-   yard:{t:'Yard Stuffing',s:'Ready for the vessel',d:'Cargo is loaded into the container right at the yard, so the shipment is ready to reach the port in time for the vessel.',p:['Stuffing and empty-container scheduling per booking.','Counting, dunnage and lashing of cargo inside the container.','Linked with road transport to deliver the container to the port on time.']},
+   road:{t:'Trucking Inland',s:'Warehouse–port link',d:'Inland haulage linking factories, warehouses and seaports, keeping the whole transport chain running smoothly.',p:['Container pick-up and delivery timed to stuffing and vessel schedules.','Closely coordinated with ocean freight through one point of contact.']},
+   yard:{t:'Stuffing CY',s:'Ready for the vessel',d:'Cargo is loaded into the container right at the yard, so the shipment is ready to reach the port in time for the vessel.',p:['Stuffing and empty-container scheduling per booking.','Counting, dunnage and lashing of cargo inside the container.','Linked with road transport to deliver the container to the port on time.']},
    docs:{t:'Shipping Documentation',s:'Export–import paperwork',d:'Preparation and review of shipping documents such as the booking confirmation, bill of lading, invoice and packing list, to reduce errors and delays at the origin and destination ports.',p:['Support in obtaining specialised certificates: Certificate of Origin, Phytosanitary, Fumigation, etc.','Coordinating procedures as each shipment requires.','Clear, traceable record keeping and cross-checking.']}
   },
   g:{p:'Coconut products',l:'Logistics solutions'},
@@ -749,10 +794,10 @@ function renderCard(kind,id){
     h='<span class="kick"><i></i>'+c.kick+'</span><h2 id="ctitle">'+c.t+'</h2><p class="d">'+c.d+'</p><div class="facts">'+
       '<div class="fact">'+svg('doc')+'<div><small>'+c.co+'</small>'+c.coV+'</div></div>'+
       '<div class="fact">'+svg('phone')+'<div><small>'+c.ph+'</small><a href="tel:+84909641011">Mr Hans · 0909 641 011</a></div></div>'+
-      '<div class="fact">'+svg('mail')+'<div><small>'+c.em+'</small><a href="mailto:Info@cocoseavn.com">Info@cocoseavn.com</a></div></div>'+
+      '<div class="fact">'+svg('mail')+'<div><small>'+c.em+'</small><a href="mailto:info@cocoseavn.com">info@cocoseavn.com</a></div></div>'+
       '<div class="fact">'+svg('pin')+'<div><small>'+c.ad+'</small>'+L.addr+'</div></div>'+
       '<div class="fact">'+svg('docs')+'<div><small>'+c.tx+'</small>0319570124</div></div></div>'+
-      '<div class="cfoot"><a class="btn pri" href="tel:+84909641011"><span>'+c.call+'</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+IC.phone+'</svg></a><a class="btn sec" href="mailto:Info@cocoseavn.com"><span>'+c.btn+'</span>'+ARW+'</a></div>';
+      '<div class="cfoot"><a class="btn pri" href="tel:+84909641011"><span>'+c.call+'</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+IC.phone+'</svg></a><a class="btn sec" href="mailto:info@cocoseavn.com"><span>'+c.btn+'</span>'+ARW+'</a></div>';
   }
   cvis.innerHTML=vis;cbody.innerHTML=h;cbody.scrollTop=0;
 }
